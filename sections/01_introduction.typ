@@ -58,24 +58,28 @@
 == Lifetime of Variables
 #rect(inset: 0pt)[
   #table(
-    columns: (1fr, 1.5fr, 1.8fr, 1.5fr),
+    columns: (1fr, 1.5fr, 2fr, 1.5fr),
     align: left,
     [*Type*], [*Creation*], [*Initialization*], [*Destruction*],
 
-    [*Automatic* \ _Local variables in registers or on the stack_],
-    [Each time the program enters the function in which it is defined],
+    [*Automatic* \ _STACK_],
+    [(Each time the program enters the function in which it is defined)],
     [Default: #underline[No] initialization \ \ If definition contains an assignment: Each time program enters block],
     [On each return from function],
 
-    [*Static Allocation* \ _Memory objects in DATA sections_ \ (1) Global variables \ (2) Module-wide variables with qualifier `static` \ (3) Variables within functions with qualifier `static`],
+    [*Static Allocation* \ _.data/.bss_],
     [#underline[Once]: Start of program],
     [#underline[Once]: Start of program],
-    [At program termination \ _On bare-metal embedded systems there is usually no 'program termination'; in practice these objects exist for the entire time the MCU is powered._],
+    [At program termination],
 
-    [*Dynamic Allocation* \ _Memory objects on the heap_],
+    [*Dynamic Allocation* \ _HEAP_],
     [By calling `malloc()`],
     [Responsibility of programmer: Source code has to explicitly write initial values],
     [By calling `free()`],
   )
 
+]
+== Potential hardware issues
+#rect(inset: 1pt)[
+  #image("/assets/image-3.png")
 ]
