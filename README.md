@@ -1,0 +1,4 @@
+- Labs: 40% - 39 points = 6
+- SEP: Open book, online, no AI
+- Exercises: Based on previous SEP - no better preparation available
+- KIT 15? i think

@@ -37,7 +37,7 @@
 
 #let section_01 = include "sections/01_introduction.typ";
 
-#columns(3, gutter: 0pt)[
+#columns(4, gutter: 0pt)[
   #stack(
     section_01,
   )
