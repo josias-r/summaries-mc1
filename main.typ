@@ -9,6 +9,8 @@
 
 #set rect(stroke: 0.5pt)
 
+#set table(stroke: 0.5pt)
+
 #show heading.where(level: 1): it => {
   set text(fill: white, weight: "bold", size: 5pt)
   set align(center)
@@ -36,9 +38,11 @@
 }
 
 #let section_01 = include "sections/01_introduction.typ";
+#let section_02 = include "sections/02_power_management.typ";
 
 #columns(4, gutter: 0pt)[
   #stack(
     section_01,
+    section_02,
   )
 ]

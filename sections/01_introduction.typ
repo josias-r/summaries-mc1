@@ -8,7 +8,7 @@
   #image("/assets/image-1.png")
 ]
 == C Var Attributes
-#rect()[
+#rect(inset: 0pt)[
   #table(
     columns: (auto, 1fr),
     [*Type*], [Implies size, i.e. number of bytes in memory],
@@ -20,9 +20,10 @@
     [When is the variable created (allocation of memory) and when is it destroyed (deallocation of memory)],
   )
 
-  *C*: Sizes of integer types depend on _arch and compiler_! Find it in `C99 - stdint.h`
-
-  Also, pointers are _platform_ dependent.
+  #block(inset: 2pt)[
+    *C*: Sizes of integer types depend on _arch and compiler_! Find it in `C99 - stdint.h`
+    Also, pointers are _platform_ dependent.
+  ]
 ]
 == C Declarations vs Definitions
 #rect()[
@@ -55,7 +56,7 @@
 ]
 
 == Lifetime of Variables
-#rect(inset: 0.5pt)[
+#rect(inset: 0pt)[
   #table(
     columns: (1fr, 1.5fr, 1.8fr, 1.5fr),
     align: left,
