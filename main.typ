@@ -37,12 +37,11 @@
   )
 }
 
-#let section_01 = include "sections/01_introduction.typ";
-#let section_02 = include "sections/02_power_management.typ";
 
 #columns(4, gutter: 0pt)[
   #stack(
-    section_01,
-    section_02,
+    include "sections/01_introduction.typ",
+    include "sections/02_power_management.typ",
+    include "sections/03_structuring_embedded_sw.typ",
   )
 ]
