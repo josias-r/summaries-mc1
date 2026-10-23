@@ -44,5 +44,6 @@
     include "sections/02_power_management.typ",
     include "sections/03_structuring_embedded_sw.typ",
     include "sections/04_digital_sensors.typ",
+    include "sections/05_hw_timer_to_dispatcher.typ",
   )
 ]
